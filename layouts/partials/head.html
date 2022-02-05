@@ -1,7 +1,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Site.Title }} - {{ .Site.Params.slogan }}</title>
+<title>
+  {{- if .IsHome -}}
+  {{- .Site.Title }} - {{ .Site.Params.slogan -}}
+  {{- else -}}
+  {{- .Title }} - {{ .Site.Title -}}
+  {{- end -}}
+</title>
 <script>
 // create a dynamic year and insert into the js-year span
 document.getElementById('js-year').innerHTML = new Date().getFullYear();

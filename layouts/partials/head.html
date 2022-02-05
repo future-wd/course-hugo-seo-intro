@@ -8,6 +8,24 @@
   {{- .Title }} - {{ .Site.Title -}}
   {{- end -}}
 </title>
+<meta name="description" content="{{ .Description | default (truncate 145 .Summary) }}">
+{{- /* alternate output formats e.g. rss feed */ -}}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{- /* canonical rel tags */ -}}
+{{- if .IsNode -}}
+<link rel="canonical" href="{{ .Paginator.URL | absURL }}">
+{{- if .Paginator.HasNext -}}
+<link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
+{{- end -}}
+{{- if .Paginator.HasPrev -}}
+<link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
+{{- end -}}
+{{- else -}}
+<link rel="canonical" href="{{ .Permalink | absURL }}">
+{{- end -}}
+
 <script>
 // create a dynamic year and insert into the js-year span
 document.getElementById('js-year').innerHTML = new Date().getFullYear();

@@ -4,9 +4,15 @@
  {{ partial "head" . }}
 </head>
 <body>
-  {{ partial "header" . }}
-  {{ block "main" . }}{{ end }}
-  {{ partial "footer" . }}
+  <header>
+    {{ partial "header" . }}
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    {{ partial "footer" . }}
+  </footer>
   {{ partial "scriptFooter" . }}
 </body>
 </html>

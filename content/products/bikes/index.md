@@ -4,8 +4,9 @@ date: 2021-11-23T21:43:02+11:00
 brand: "Giant"
 mpn: 384733
 sku: 398382
+price: 399
 draft: false
-images: [bikes.jpg]
+images: [bikes.jpg, boats.jpg]
 categories: [bicycles]
 summary: Bikes - Doloribus facere architecto voluptatem incidunt officiis libero laborum amet provident maiores? Voluptates optio, reprehenderit nesciunt eos, cupiditate consequuntur sapiente explicabo laudantium voluptate ea quae sit tempora, praesentium repellat pariatur perferendis quibusdam.
 ---

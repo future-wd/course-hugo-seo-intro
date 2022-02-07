@@ -36,3 +36,45 @@
   </div>
 </section>
 {{ end }}
+
+{{ define "JSON-LD" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ .Title }}",
+  {{ with .Params.images -}}
+  "image": [
+    {{- range $index, $element := . -}}
+    {{- if ne $index 0 -}}, {{ end }}
+    {{ $image := $.Resources.GetMatch $element -}}
+    {{ $image.Permalink -}}
+    {{- end }}
+    ],
+  {{ end -}}
+  "description": {{ .Content | plainify | safeJS }},
+  {{ with .Params.sku -}}
+  "sku": "{{ . }}",
+  {{ end -}}
+  {{ with .Params.mpn -}}
+  "mpn": "{{ . }}",
+  {{ end -}}
+  {{ with .Params.brand -}}
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ . }}"
+  },
+  {{ end -}}
+  {{ if .Params.Price -}}
+  "offers": {
+    "@type": "Offer",
+    "url": {{ .Permalink }},
+    "priceCurrency": "AUD",
+    "price": "{{ .Params.price }}",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock"
+  }
+  {{ end -}}
+}
+</script>
+{{ end }}

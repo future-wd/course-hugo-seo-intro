@@ -1,5 +1,4 @@
 baseURL: http://localhost/
-
 # for xml output
 languageCode: "en-au"
 # for website
@@ -19,7 +18,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
+# taxonomy set up (tags have been disabled)
+taxonomies:
+  category: categories
 params:
   slogan: The best in the west
 

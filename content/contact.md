@@ -2,7 +2,9 @@
 title: "Contact"
 date: 2021-12-17T13:31:12+11:00
 draft: false
-menu: main
+menu:
+- main
+- footerLinks
 weight: 100
 type: contact
 # google map url

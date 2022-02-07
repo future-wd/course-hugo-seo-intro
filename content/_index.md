@@ -2,7 +2,9 @@
 title: "Home"
 date: 2021-11-16T23:04:08+11:00
 draft: false
-menu: main
+menu:
+- main
+- footerLinks
 weight: 10
 heading: My first Bootstrap & Hugo Site
 btn1:

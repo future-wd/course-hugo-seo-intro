@@ -69,7 +69,7 @@
     "name": "{{ . }}"
   },
   {{ end -}}
-  {{ if .Params.Price -}}
+  
   "offers": {
     "@type": "Offer",
     "url": {{ .Permalink }},
@@ -78,7 +78,7 @@
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock"
   }
-  {{ end -}}
+ 
 }
 </script>
 {{ end }}

@@ -22,6 +22,19 @@ markup:
 taxonomies:
   category: categories
 params:
+  twitterSite: "@site_name"
+  twitterCreator: "@my_account"
+
+
+
+
+
+
+
+
+
+
+
   slogan: The best in the west
 
   # https://schema.org/Organization

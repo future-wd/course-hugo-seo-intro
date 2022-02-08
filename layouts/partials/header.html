@@ -19,7 +19,24 @@
           <a href="#" class="nav-link"><span lang="es_ES">Se Habla Español!</span></a>
         </li>
       </ul>
-      
     </div>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      {{ define "breadcrumb" -}}
+      {{ with .Parent -}}
+      {{ template "breadcrumb" . -}}
+      <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .Title | humanize | title }}</a></li>
+      {{ end -}}
+      {{- end -}}
+      {{ template "breadcrumb" . -}}
+      {{- /* don't display this line on home page */ -}}
+      {{ if not .IsHome -}}
+      <li class="breadcrumb-item active" aria-current="page">{{ .Title | humanize | title }}</li>
+      {{- end -}}
+    </ol>
   </div>
 </nav>

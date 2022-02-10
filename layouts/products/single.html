@@ -56,7 +56,7 @@
     {{- end }}
     ],
   {{ end -}}
-  "description": {{ .Content | plainify | safeJS }},
+  "description": "{{ .Content | plainify | safeJS }}",
   {{ with .Params.sku -}}
   "sku": "{{ . }}",
   {{ end -}}

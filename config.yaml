@@ -67,8 +67,8 @@ params:
       # hasMap
       url: https://goo.gl/maps/2bHxJ3bfhtHtnx2b9
       geo: #coordinates 
-      #icon: icons/bootstrap/geo-alt
-      icon: bi bi-geo-alt
+      icon: icons/bootstrap/geo-alt
+      # icon: bi bi-geo-alt
       disable: false
     # postal address is just for contact details display
     # servicePostalAddress:
@@ -80,8 +80,8 @@ params:
 
     openingHours:
     - name: Opening Hours
-      # icon: icons/bootstrap/clock
-      icon: bi bi-clock
+      icon: icons/bootstrap/clock
+      # icon: bi bi-clock
       hours:
       # date is ignored for display and schema
       - day: Monday
@@ -99,8 +99,8 @@ params:
     - name: Phone
       text: (02) 8004 3293
       url: "tel:+61280043293"
-      # icon: icons/bootstrap/phone
-      icon: bi bi-phone
+      icon: icons/bootstrap/phone
+      # icon: bi bi-phone
       disable: false
     # mobile
     # - text:
@@ -111,8 +111,8 @@ params:
     - name: Email
       text: test@domain.com
       url: "mailto:test@domain.com"
-      # icon: icons/bootstrap/envelope
-      icon: bi bi-envelope
+      icon: icons/bootstrap/envelope
+      # icon: bi bi-envelope
       disable: false
       desc: Email Address
   # only for contact details display

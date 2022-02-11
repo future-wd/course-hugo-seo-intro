@@ -11,9 +11,10 @@
         <div class="col-md-6">
           {{ with .Params.images }}
           {{ with index . 0 }}
-          {{ with $.Resources.GetMatch . }}
+          {{/*  {{ with $.Resources.GetMatch . }}
           <img src="{{ .RelPermalink }}" alt="" class="img-fluid">
-          {{ end }}
+          {{ end }}  */}}
+          {{ partial "image" (dict "src" . "page" $ "alt" $.Title "format" "productSingle") }}
           {{ end }}
           {{ end }}
         </div>

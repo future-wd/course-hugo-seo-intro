@@ -26,6 +26,12 @@ params:
   twitterCreator: "@my_account"
   defaultDescription: "We sell all kinds of outdoor equipment."
 
+  image:
+    widths:
+      default: [400, 600, 800, 1200]
+      productSingle: [336, 456, 535, 700, 1000]
+
+
 
 
 

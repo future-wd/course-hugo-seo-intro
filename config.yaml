@@ -13,6 +13,8 @@ copyright: Web Design Inc.
 paginate: 6
 # controls the summary length on list pages, and for the meta description tag (length in words)
 summaryLength: 70
+# enables robots.txt
+enableRobotsTXT: true
 # this is required so that Hugo will render markdown to HTML
 markup:
   goldmark:

@@ -13,6 +13,11 @@ copyright: Web Design Inc.
 paginate: 6
 # controls the summary length on list pages, and for the meta description tag (length in words)
 summaryLength: 70
+# remove all white spaces when minifying
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false
 # this is required so that Hugo will render markdown to HTML
 markup:
   goldmark:
@@ -21,6 +26,10 @@ markup:
 # taxonomy set up (tags have been disabled)
 taxonomies:
   category: categories
+
+
+
+
 params:
   twitterSite: "@site_name"
   twitterCreator: "@my_account"

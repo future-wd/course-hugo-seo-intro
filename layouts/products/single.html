@@ -57,7 +57,7 @@
     {{- end }}
     ],
   {{ end -}}
-  "description": "{{ .Content | plainify | safeJS }}",
+  "description": {{ replace .Plain "\n" " " }},
   {{ with .Params.sku -}}
   "sku": "{{ . }}",
   {{ end -}}
@@ -70,7 +70,6 @@
     "name": "{{ . }}"
   },
   {{ end -}}
-  
   "offers": {
     "@type": "Offer",
     "url": {{ .Permalink }},
@@ -79,7 +78,6 @@
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock"
   }
- 
 }
 </script>
 {{ end }}

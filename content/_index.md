@@ -29,7 +29,7 @@ cards:
     url: "#"
 - title: Card 3 Title
   img: /img/placeholder3.jpg
-  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?
+  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?  Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?
   btn:
     text: Button 3 text
     url: "#"

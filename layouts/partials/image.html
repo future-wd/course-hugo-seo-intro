@@ -19,10 +19,19 @@
 
 
 <img 
-  src="{{ $img.RelPermalink }}" 
-  srcset="{{ $srcset }}"
+  data-src="{{ $img.RelPermalink }}" 
+  data-srcset="{{ $srcset }}"
   class="img-fluid lazyload"
   height="{{ $img.Height }}"
   width="{{ $img.Width }}"
   alt="{{ .alt }}"
-  sizes="auto">
+  data-sizes="auto">
+<noscript>
+  <img 
+  src="{{ $img.RelPermalink }}" 
+  class="img-fluid"
+  height="{{ $img.Height }}"
+  width="{{ $img.Width }}"
+  alt="{{ .alt }}"
+  >
+</noscript>

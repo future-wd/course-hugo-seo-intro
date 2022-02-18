@@ -1,3 +1,14 @@
+// lazysizes noscript support
+.no-js img.lazyload {
+  display: none;
+}
+// work around for width: auto 
+// use !important on both properties if you have issues.
+img[data-sizes="auto"] { 
+  display: block; 
+  width: 100%; 
+}
+
 // Configuration
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";

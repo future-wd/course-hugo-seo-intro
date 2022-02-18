@@ -11,8 +11,8 @@
       <div class="row row-cols-1 row-cols-md-3 g-3">
         {{ range .Paginator.Pages }}
         <div class="col">
-          <div class="card h-100">  
-            <article>
+          <article class="h-100">
+            <div class="card h-100">  
               {{ $ctx := . }}
               {{ with .Params.images }}
               {{ with index . 0 }}
@@ -28,8 +28,8 @@
                 <p class="card-text">{{ .Summary | plainify }}</p>
                   <a href="{{ .Permalink }}" class="btn btn-primary mt-auto">More Details</a>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
         {{ end }}
       </div>

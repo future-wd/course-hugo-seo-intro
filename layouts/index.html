@@ -11,7 +11,7 @@
             <header>
               <h1>{{ .Params.heading }}</h1>
             </header>
-            <div class="lead">{{ .Content | markdownify }}</div>
+            <div class="lead">{{ .Content }}</div>
             <div class="d-grid gap-2 d-md-flex">
               {{ with .Params.btn1 }}
               {{ if and .text .url }}

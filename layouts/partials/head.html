@@ -25,6 +25,9 @@
 {{- else -}}
 <link rel="canonical" href="{{ .Permalink | absURL }}">
 {{- end -}}
+{{- if .Params.private -}}
+<meta name="robots" content="noindex, nofollow">
+{{- end -}}
 
 <script>
 // create a dynamic year and insert into the js-year span

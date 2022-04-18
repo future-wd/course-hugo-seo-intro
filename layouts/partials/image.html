@@ -2,7 +2,7 @@
 
 {{ $widths := site.Params.image.widths.default | default (slice 400 600 800 1200) }}
 {{ if eq .format "productSingle" }}
-  {{ $widths := site.Params.image.widths.productSingle | default (slice 336 456 535 700 1000) }}
+  {{ $widths = site.Params.image.widths.productSingle | default (slice 336 465 535 700 1000) }}
 {{ end }}
 {{ $widths = sort $widths }}
 {{ $srcset := slice }}

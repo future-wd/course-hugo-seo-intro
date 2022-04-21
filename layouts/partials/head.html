@@ -8,13 +8,13 @@
   {{- .Title }} - {{ .Site.Title -}}
   {{- end -}}
 </title>
-<meta name="description" content="{{- with .Description -}}{{- . -}}{{- else -}}{{- if .IsPage -}}{{ .Summary -}}{{- else -}}{{ .Site.Params.defaultDescription -}}{{- end -}}{{- end }}">
+<meta name="description" content="{{- with .Description -}}{{- else -}}{{- if .IsPage -}}{{ .Summary }}{{- else -}}{{ .Site.Params.defaultDescription }}{{- end -}}{{- end -}}">
 {{- /* alternate output formats e.g. rss feed */ -}}
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 {{- /* canonical rel tags */ -}}
-{{- if .IsNode -}}
+{{- if and .IsNode (not .IsHome) -}}
 <link rel="canonical" href="{{ .Paginator.URL | absURL }}">
 {{- if .Paginator.HasNext -}}
 <link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
@@ -27,6 +27,8 @@
 {{- end -}}
 {{- if .Params.private -}}
 <meta name="robots" content="noindex, nofollow">
+{{- else if .Params.robots -}}
+<meta name="robots" content="{{ .Params.robots }}">
 {{- end -}}
 
 <script>

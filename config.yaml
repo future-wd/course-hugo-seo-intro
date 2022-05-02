@@ -11,6 +11,7 @@ paginate: 6
 # controls the summary length on list pages, and for the meta description tag (length in words)
 summaryLength: 70
 # remove all white spaces when minifying
+# only required for old versions of hugo
 minify:
   tdewolff:
     html:

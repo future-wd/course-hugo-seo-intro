@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ $pages := .Data.Pages }}
-  {{ $pages = where $pages "Params.private" "!=" "true" }}
+  {{ $pages = where $pages "Params.private" "!=" true }}
   {{ range $pages }}
     {{- if .Permalink -}}
   <url>

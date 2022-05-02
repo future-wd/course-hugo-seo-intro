@@ -7,7 +7,7 @@ menu:
 - main
 - footerLinks
 weight: 20
-private: true
+# private: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus possimus quidem consequatur libero excepturi aperiam quod adipisci nostrum. Explicabo tempore totam eaque. Laudantium consequuntur doloribus commodi, repellat nihil quia inventore nemo? Similique atque et ratione, assumenda placeat nihil, labore minus quibusdam tenetur numquam veniam voluptates ea eaque cupiditate cum esse deserunt possimus nisi mollitia blanditiis, expedita maxime aspernatur enim iusto. Voluptatem quisquam quam eveniet hic repellat fuga similique asperiores possimus? Veniam error odit accusamus saepe temporibus vel sint ad quae vitae dolores sequi asperiores, beatae quod a reprehenderit blanditiis delectus enim hic quibusdam eum. Architecto non pariatur laudantium quibusdam corporis.
 

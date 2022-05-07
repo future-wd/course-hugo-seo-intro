@@ -22,21 +22,17 @@
     </div>
   </div>
 </nav>
-
 <nav aria-label="breadcrumb">
   <div class="container-fluid">
     <ol class="breadcrumb">
-      {{ define "breadcrumb" -}}
-      {{ with .Parent -}}
-      {{ template "breadcrumb" . -}}
-      <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .Title | humanize | title }}</a></li>
-      {{ end -}}
-      {{- end -}}
-      {{ template "breadcrumb" . -}}
-      {{- /* don't display this line on home page */ -}}
-      {{ if not .IsHome -}}
-      <li class="breadcrumb-item active" aria-current="page">{{ .Title | humanize | title }}</li>
-      {{- end -}}
-    </ol>
+    {{- define "partials/inline/breadcrumb" -}}
+      {{- with .Parent }}
+        {{ partial "inline/breadcrumb" . }}
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title | humanize | title }}</a></li>
+      {{- end }}
+    {{- end -}}
+    {{ partial "inline/breadcrumb" . }}
+    <li class="breadcrumb-item active" aria-current="page">{{ .Title | humanize | title }}</li>
+  </ol>
   </div>
 </nav>
